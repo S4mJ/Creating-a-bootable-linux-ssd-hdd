@@ -1,10 +1,10 @@
-#Overviev
+# Overviev
   This guide was created to help anyone who wants to create a bootable ssd or hdd with linux that is usable on any computer.
   I spent a long time researching how to do this as well as fixes for problems I encountered and this will walk you through the entire    process.
   This guide uses the ubuntu operating system so commands may vary for other operating systems.
   This guide will also make the drive compatable with Apple computers.
 
-#Installing Linux 
+# Installing Linux 
   This is the first step to making the bootable drive and requires you to have both the ssd/hdd you would like to use as well as a usb to save the ubuntu ISO to.
     
     * Download the Ubuntu ISO to your system from https://ubuntu.com/download/desktop. It is ok to get the older version at this stage as it will be updated later anyway.
@@ -24,7 +24,7 @@
           ```
      * Once this is done you can power off the system with both the usb and ssd/hdd still plugged in. 
         
-#Setting up the partitions 
+# Setting up the partitions 
   This step will walk you through the process of installing linux onto the main ssd/hdd and setting up the partitions.
   
     * Power on your machine and repeatedly press the f12 button(could be another button depending on your motherboard manufacturer) until you come to a set of options in a boot menu.
