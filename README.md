@@ -9,7 +9,7 @@
   Download the Ubuntu ISO to your system from https://ubuntu.com/download/desktop. It is ok to get the older version at this stage as it will be updated later anyway.
     
   * Insert both the usb and ssd into your ssd and open a terminal to execute the following commands.
-  * These commands are for macOS specifically so you will need to look online for windows equivilents.
+  * These commands are for macOS specifically so you will need to look online for windows equivalents.
       ```
       diskutil list
       diskutil eraseDisk FAT32 UBUNTU /dev/<YOUR DISK ID> 
