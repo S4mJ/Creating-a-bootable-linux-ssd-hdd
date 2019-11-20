@@ -4,7 +4,7 @@
   This guide uses the ubuntu operating system so commands may vary for other operating systems.
   This guide will also make the drive compatable with Apple computers.
 
-# Installing Linux 
+## Installing Linux 
   This is the first step to making the bootable drive and requires you to have both the ssd/hdd you would like to use as well as a usb to save the ubuntu ISO to.
     
     * Download the Ubuntu ISO to your system from https://ubuntu.com/download/desktop. It is ok to get the older version at this stage as it will be updated later anyway.
@@ -24,7 +24,7 @@
           ```
      * Once this is done you can power off the system with both the usb and ssd/hdd still plugged in. 
         
-# Setting up the partitions 
+## Setting up the partitions 
   This step will walk you through the process of installing linux onto the main ssd/hdd and setting up the partitions.
   
     * Power on your machine and repeatedly press the f12 button(could be another button depending on your motherboard manufacturer) until you come to a set of options in a boot menu.
@@ -47,7 +47,7 @@
     
     *Continue on through these options untill you finish the installation and are instructed to reboot the system. When this happens again select the USB as the option to boot from and select the test ubuntu first option.
     
-#onfiguring the ssd/hdd
+## Configuring the ssd/hdd
   At this stage you have a functioning bootable ssd/hdd however at the moment you are only going to be able to use it on the system you created it on. This needs to be fixed.
     
     * Start by opening the terminal and running ```sudo fdisk -l``` to get a list of partitions.
@@ -94,7 +94,7 @@
 Even though the ssd/hdd will boot on any system, it will not yet be compatable with an apple computer. 
 The  solution to this is to update ubuntu to the latest version which will improve the system both from the updates and if you happen to be an apple user by allowing you to use it on an apple computer.
 
-Updating Ubuntu - 
+## Updating Ubuntu - 
   The current version of ubuntu will be 18.04. We first need to upgrade this to 19.04 then finally to 19.10.
   
   Start by running the following commands
