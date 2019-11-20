@@ -104,10 +104,11 @@ The  solution to this is to update ubuntu to the latest version which will impro
     sudo apt update && sudo apt dist-upgrade
     sudo apt install update-manager-core
     sudo nano /etc/update-manager/release-upgrades
-      When this file opens change the bottom prompt value from lts to normal then save and exit the file
+    ```
+  * When this file opens change the bottom prompt value from lts to normal then save and exit the file
     do-release-upgrade
-      This should trigger the upgrade so follow any on screen instructions and accept any pop ups that occur. When finished reboot the system.
-     ```
+  * This should trigger the upgrade so follow any on screen instructions and accept any pop ups that occur. When finished reboot the system.
+
   * You now have a system running Ubuntu 19.04
   * This will still not run well on macs however so you must now update it to 19.10
   
@@ -116,7 +117,7 @@ The  solution to this is to update ubuntu to the latest version which will impro
   * Set the notify me of a new Ubuntu version dropdown menu to for any new version
   * Open a terminal and type ```update-manager -c -d```
   * This should open the application and allow you to install the new version. If however it does not then you have the same problem I did and need to run another final command.
-      ```/usr/lib/ubuntu-release-upgrader/check-new-release-gtk```
+    ```/usr/lib/ubuntu-release-upgrader/check-new-release-gtk```
   * Click upgrade the follow it along and reboot.
     
 You should now have a fully bootable version of linux usable on any system.
