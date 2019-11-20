@@ -6,23 +6,22 @@
 
 ## Installing Linux 
   This is the first step to making the bootable drive and requires you to have both the ssd/hdd you would like to use as well as a usb to save the ubuntu ISO to.
+  Download the Ubuntu ISO to your system from https://ubuntu.com/download/desktop. It is ok to get the older version at this stage as it will be updated later anyway.
     
-    * Download the Ubuntu ISO to your system from https://ubuntu.com/download/desktop. It is ok to get the older version at this stage as it will be updated later anyway.
-    
-    * Insert both the usb and ssd into your ssd and open a terminal to execute the following commands.
-    * These commands are for macOS specifically so you will need to look online for windows equivilents.
-          ```
-          diskutil list
-          diskutil eraseDisk FAT32 UBUNTU /dev/<YOUR DISK ID> 
-          diskutil unmountDisk /dev/<YOUR DISK ID>
-          ```
-    * Repeat those three commands for both the USB and SSD/HDD.
+  * Insert both the usb and ssd into your ssd and open a terminal to execute the following commands.
+  * These commands are for macOS specifically so you will need to look online for windows equivilents.
+      ```
+      diskutil list
+      diskutil eraseDisk FAT32 UBUNTU /dev/<YOUR DISK ID> 
+      diskutil unmountDisk /dev/<YOUR DISK ID>
+      ```
+  * Repeat those three commands for both the USB and SSD/HDD.
         
-    * The following command should be only executed on the USB. Take extra care when executing this command as you dont want to do it incorrectly.
-          ```
-          sudo dd if=<PATH TO UBUNTU LIVE ISO> of=/dev/<YOUR USB DISK ID>
-          ```
-     * Once this is done you can power off the system with both the usb and ssd/hdd still plugged in. 
+  * The following command should be only executed on the USB. Take extra care when executing this command as you dont want to do it incorrectly.
+      ```
+      sudo dd if=<PATH TO UBUNTU LIVE ISO> of=/dev/<YOUR USB DISK ID>
+      ```
+   * Once this is done you can power off the system with both the usb and ssd/hdd still plugged in. 
         
 ## Setting up the partitions 
   This step will walk you through the process of installing linux onto the main ssd/hdd and setting up the partitions.
