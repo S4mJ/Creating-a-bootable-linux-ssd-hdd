@@ -72,22 +72,25 @@
       sudo mount /dev/sdXY /mnt
       
       sudo nano /mnt/etc/fstab
-        Be very careful with this file as you dont want to mess anything up.
-        When you open this file you should see a line which contains /boot/efi. Comment out this line by placing a # infront of it. 
-        Add the following line at the bottom of that document 
-        UUID=<UUID you copied down from the new partition. Should be 4 characters followed by a - then 4 more characters> /boot/efi vfat defaults 0 1
-      - Save that file by pressing ctrl + x then press Y and enter.
       ```
+  * Be very careful with this file as you dont want to mess anything up.
+  * When you open this file you should see a line which contains /boot/efi. Comment out this line by placing a # infront of it. 
+  * Add the following line at the bottom of that document 
+      ```
+      UUID=<UUID you copied down from the new partition. Should be 4 characters followed by a - then 4 more characters> /boot/efi vfat defaults 0 1
+      ```
+  * Save that file by pressing ctrl + x then press Y and enter.
+  
   * We have now created a ESP however we need to install GRUB2 on it.
   * In terminal execute the following commands.
-        ```
-        sudo mount /dev/sdXZ /mnt/boot/efi
-        for i in /dev /dev/pts /proc /sys; do sudo mount -B $i /mnt/$i; done
-        sudo cp /etc/resolv.conf /mnt/etc/
-        modprobe efivars
-        sudo chroot /mnt
-        grub-install -d /usr/lib/grub/x86_64-efi --efi-directory=/boot/efi --removable /dev/sdX
-        ```
+       ```
+       sudo mount /dev/sdXZ /mnt/boot/efi
+       for i in /dev /dev/pts /proc /sys; do sudo mount -B $i /mnt/$i; done
+       sudo cp /etc/resolv.conf /mnt/etc/
+       modprobe efivars
+       sudo chroot /mnt
+       grub-install -d /usr/lib/grub/x86_64-efi --efi-directory=/boot/efi --removable /dev/sdX
+       ```
   * Your ssd/hdd is now completely bootable on any system however some optional things can be done which I will outline below.
   
 Even though the ssd/hdd will boot on any system, it will not yet be compatable with an apple computer. 
